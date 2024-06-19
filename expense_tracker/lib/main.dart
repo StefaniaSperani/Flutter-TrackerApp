@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+// import 'package:flutter/services.dart';
+
 import 'package:expense_tracker/widgets/expenses.dart';
 
 var kColorScheme = ColorScheme.fromSeed(
@@ -11,7 +13,14 @@ var kDarkColorScheme = ColorScheme.fromSeed(
 );
 
 void main() {
-  runApp(
+  // //lo aggiungo perchè mi assicuro che il 
+  // //blocco dell'orientamento funzioni come previsto
+  // WidgetsFlutterBinding.ensureInitialized();
+  // //Imposto il sistema di orientamento
+  // SystemChrome.setPreferredOrientations([
+  //   DeviceOrientation.portraitUp,
+  // ]).then((fn){
+      runApp(
     MaterialApp(
       //copyWith sovrascrive
       darkTheme: ThemeData.dark().copyWith(
@@ -60,4 +69,7 @@ void main() {
       home: const Expenses(),
     ),
   );
-}
+  }
+  // );
+
+// }
